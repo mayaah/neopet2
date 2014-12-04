@@ -14,6 +14,7 @@ gem 'devise'
 gem 'annotate', '~> 2.6.5'
 gem 'simple_form'
 gem 'shoulda'
+gem 'pg'
 
 group :development do
   gem 'better_errors'
