@@ -1,0 +1,46 @@
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+<center><h2><u><b>Profile</b></u></h2></center>
+<section class="profile" id="profile">
+	<div class="row">
+		<div class="col-xs-4 col-sm-4">
+			<div class="newnp">
+				<div class="buttonwrap">
+			<%= button_to "Create a Custom Neopet!", new_neopet_path, :class => "button medium", :method => :get %>
+		</div>
+			</div>
+		</div>
+		<div class="col-xs-4 col-sm-4">
+			<div class="info">
+			<p>Name: <%= @user.name if @user.name %></p>
+			<p>Email: <%= @user.email if @user.email %></p>
+			<p>Neocoins: <%= @user.neocoin if @user.neocoin %></p>
+			</div>
+		</div>
+	</div>
+</section>
+ 
+ <section class="pets">
+ 	<div class="row">
+ 		<div class="col-lg-12">
+ 			<h1><u>Pets</u><h1>
+ 			</div>
+ 		</div>
+ 		<div class="row">
+ <% @user.pets.each do |pet| %>
+  			<div class="col-sm-4">
+      <span class="petname"><%= pet.name %>,</span> 
+      	<ul>Color <%= pet.color %>,</ul> 
+      	<ul> Hunger <%= pet.hunger %>,</ul> 
+      	<ul> Loyalty <%= pet.loyalty%>, </ul> 
+      	<ul><%= button_to "Battle!", battle_path(id: pet), :class => "button medium", :method => :patch %>,</ul> 
+      	<ul><%= button_to "Feed Neopet", feed_path(id: pet), :class => "button medium", :method => :patch %>,</ul> 
+      	<ul><span class="createpetpet"><%= link_to "Create a Petpet!", new_petpet_path(:pet_id => pet.id), :class => "button medium", :method => :get %></span></ul>
+      <% pet.pet_pets.each do |pet_pet| %>
+      	<b>My PetPets:</b> Name: <%= pet_pet.name %>,  Color <%= pet_pet.color %>
+      	<% end %>
+      </div>
+ <% end %>
+</div>
+</div>
+</section>

@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <h3>Pets</h3>
+    <div class="column">
+      <table class="table">
+        <tbody>
+          <% @pets.each do |pet| %>
+            <tr>
+              <td><%= link_to pet.name, pet %></td>
+              <td><%= link_to pet.color, pet %></td>
+              <td><%= button_to "Adopt this pet!", adopt_path(id: pet), :class => "button small", :method => :patch %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

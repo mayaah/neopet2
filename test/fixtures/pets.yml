@@ -1,0 +1,10 @@
+one:
+ name: hii
+ loyalty: 50
+ hunger: 50
+ id: 1
+two:
+ name: herr
+ color: blue
+ loyalty: 50
+ hunger: 50

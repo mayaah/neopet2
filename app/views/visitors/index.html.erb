@@ -1,0 +1,18 @@
+<!-- Custom fonts -->
+<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+
+
+<div class="header2">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="title-text">
+				<span class="title">neopet</span>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="col-lg-12">
+		<span class="users"><p><%= link_to 'Users:', users_path, :class=>"userslink" %> <%= User.count %> registered</p></span>
+	</div>
+</div>

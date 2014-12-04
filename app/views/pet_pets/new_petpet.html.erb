@@ -1,0 +1,13 @@
+<p>
+<p>
+<div class="row">
+	<div class="col-lg-12">
+		<center>
+<%= simple_form_for PetPet.new, :url => createpetpet_path(id: @id) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :color %>
+    <%= f.button :submit %>
+<% end %>
+</center>
+</div>
+</div>
