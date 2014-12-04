@@ -12454,3 +12454,2270 @@ Processing by VisitorsController#index as HTML
   Rendered layouts/_navigation.html.erb (2.6ms)
   Rendered layouts/_messages.html.erb (0.1ms)
 Completed 200 OK in 213ms (Views: 211.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:16:16 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (17.0ms)
+  Rendered layouts/_navigation.html.erb (19.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 402ms (Views: 385.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-04 04:16:23 -0800
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (1.4ms)
+  Rendered users/_user.html.erb (0.4ms)
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 225ms (Views: 222.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-04 04:16:29 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (40.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 189.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:16:33 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 183ms (Views: 181.9ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:16:34 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"qfRjspVpXyKm5ynuPW/nkSAnnpmM7x9ZYy4e3JkqsGg="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 430ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:16:35 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (4.1ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 203ms (Views: 202.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:16:37 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 171ms (Views: 170.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:16:42 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (26.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 211ms (Views: 209.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:16:44 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 201ms (Views: 199.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:31:40 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (14.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 422ms (Views: 403.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:32:06 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QKjqPgqFl1ed0b2gHyCX71FYDohg5Dv8zGqnqhHXfog=", "user"=>{"name"=>"Jonathan", "email"=>"jon@jon.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.7ms)[0m  begin transaction
+  [1m[36mUser Exists (4.6ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jon@jon.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jon@jon.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 12:32:06.958113"], ["email", "jon@jon.com"], ["encrypted_password", "$2a$10$5EptuXOp3fJsJ3ERlsWLK.8UiSbaJrmk8wEknSfQTFqFLXXkEuMbu"], ["name", "Jonathan"], ["updated_at", "2014-12-04 12:32:06.958113"]]
+  [1m[35m (4.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["current_sign_in_at", "2014-12-04 12:32:06.975063"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:32:06.975063"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:32:06.977106"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 179ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:32:07 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (4.6ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 256ms (Views: 254.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 04:32:14 -0800
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (9.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 183.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/adopt?id=6" for 127.0.0.1 at 2014-12-04 04:32:24 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"QKjqPgqFl1ed0b2gHyCX71FYDohg5Dv8zGqnqhHXfog=", "id"=>"6"}
+  [1m[35mPet Load (0.3ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["neocoin", 3], ["updated_at", "2014-12-04 12:32:24.788079"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 6[0m  [["updated_at", "2014-12-04 12:32:24.792645"], ["user_id", 3]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 04:32:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 182.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/battle?id=6" for 127.0.0.1 at 2014-12-04 04:32:44 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"QKjqPgqFl1ed0b2gHyCX71FYDohg5Dv8zGqnqhHXfog=", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/users_controller.rb:27:in `battle'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:35:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/7f04d6332013b1e1/variables" for 127.0.0.1 at 2014-12-04 04:32:44 -0800
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-12-04 04:34:09 -0800
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 202ms (Views: 199.3ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:34:17 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"QKjqPgqFl1ed0b2gHyCX71FYDohg5Dv8zGqnqhHXfog="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:34:17 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 200ms (Views: 199.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:34:19 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 191.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:34:23 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWMkmn+scnPrlWwSRMuT1NVacb9/z9aVx3M1vgoRog0=", "user"=>{"email"=>"maya2481@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'maya2481@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 6ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWMkmn+scnPrlWwSRMuT1NVacb9/z9aVx3M1vgoRog0=", "user"=>{"email"=>"maya2481@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 288ms (Views: 202.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:34:29 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UWMkmn+scnPrlWwSRMuT1NVacb9/z9aVx3M1vgoRog0=", "user"=>{"email"=>"mayaah@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'mayaah@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-12-04 12:34:29.737394"], ["last_sign_in_at", "2014-12-04 11:17:05.872553"], ["sign_in_count", 6], ["updated_at", "2014-12-04 12:34:29.738021"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 93ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:34:29 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 175.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-04 04:34:33 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/_user.html.erb (0.3ms)
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 187ms (Views: 184.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-04 04:34:34 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 174ms (Views: 171.5ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/battle?id=11" for 127.0.0.1 at 2014-12-04 04:34:35 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"m7UTjiSRRQECdJzLsyggqaxlocnM7njmUDL6kSxn4ec=", "id"=>"11"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["neocoin", 4], ["updated_at", "2014-12-04 12:34:35.827021"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 11  [["hunger", 45], ["loyalty", 60], ["updated_at", "2014-12-04 12:34:35.829899"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-04 04:34:35 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 180ms (Views: 178.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/battle?id=11" for 127.0.0.1 at 2014-12-04 04:34:45 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"m7UTjiSRRQECdJzLsyggqaxlocnM7njmUDL6kSxn4ec=", "id"=>"11"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["neocoin", 5], ["updated_at", "2014-12-04 12:34:46.009856"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 11[0m  [["hunger", 40], ["loyalty", 70], ["updated_at", "2014-12-04 12:34:46.012459"]]
+  [1m[35m (4.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 16ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-12-04 04:34:46 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 184ms (Views: 180.9ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:34:53 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"m7UTjiSRRQECdJzLsyggqaxlocnM7njmUDL6kSxn4ec="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:34:53 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 171ms (Views: 170.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:34:55 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 180ms (Views: 178.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:35:03 -0800
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eU/tkhWjZxHyQyFvP3zI/qkeNA87hmaqcaq0AkTeUcw=", "user"=>{"email"=>"jon@jon.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'jon@jon.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["current_sign_in_at", "2014-12-04 12:35:03.601331"], ["sign_in_count", 2], ["updated_at", "2014-12-04 12:35:03.601935"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 97ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:35:03 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 224ms (Views: 223.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-04 04:35:07 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/_user.html.erb (0.9ms)
+  Rendered users/index.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 187.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 04:35:08 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 182ms (Views: 178.6ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/feed?id=6" for 127.0.0.1 at 2014-12-04 04:35:11 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"ppf4Wiw7O+m1zenY40uEccSu9OfxaJRzZg0ll+rJEPg=", "id"=>"6"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["neocoin", 2], ["updated_at", "2014-12-04 12:35:11.832231"]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 6[0m  [["hunger", 60], ["updated_at", "2014-12-04 12:35:11.836876"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 04:35:11 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 186.8ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/battle?id=6" for 127.0.0.1 at 2014-12-04 04:35:14 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"ppf4Wiw7O+m1zenY40uEccSu9OfxaJRzZg0ll+rJEPg=", "id"=>"6"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["neocoin", 3], ["updated_at", "2014-12-04 12:35:14.477949"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 6  [["hunger", 55], ["loyalty", 60], ["updated_at", "2014-12-04 12:35:14.482621"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 14ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 04:35:14 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 180ms (Views: 177.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:35:48 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"ppf4Wiw7O+m1zenY40uEccSu9OfxaJRzZg0ll+rJEPg="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:35:48 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 179ms (Views: 178.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:35:50 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 183ms (Views: 181.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:36:16 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "user"=>{"name"=>"Tim", "email"=>"timotan@tim.tim", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'timotan@tim.tim' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'timotan@tim.tim' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 12:36:16.100015"], ["email", "timotan@tim.tim"], ["encrypted_password", "$2a$10$4cQTSg7Hf/MGNFiCA5zmee4SQ9ffGPGlETQNIbYc5DkTfU5YGXae."], ["name", "Tim"], ["updated_at", "2014-12-04 12:36:16.100015"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["current_sign_in_at", "2014-12-04 12:36:16.103472"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:36:16.103472"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:36:16.103928"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:36:16 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 170ms (Views: 168.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 04:36:18 -0800
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (7.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 187.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/adopt?id=1" for 127.0.0.1 at 2014-12-04 04:36:20 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"1"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 3], ["updated_at", "2014-12-04 12:36:20.295196"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 1[0m  [["updated_at", "2014-12-04 12:36:20.299509"], ["user_id", 4]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 13ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:36:20 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  Rendered users/show.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 190ms (Views: 186.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 04:36:59 -0800
+Processing by PetsController#index as HTML
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"[0m
+  Rendered pets/index.html.erb within layouts/application (7.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 195ms (Views: 193.7ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/adopt?id=9" for 127.0.0.1 at 2014-12-04 04:37:02 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[36mPet Load (0.3ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4[0m  [["neocoin", 6], ["updated_at", "2014-12-04 12:37:02.025647"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 9  [["updated_at", "2014-12-04 12:37:02.028069"], ["user_id", 4]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:02 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 4]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 190ms (Views: 187.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:05 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 9]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/users_controller.rb:27:in `battle'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:35:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/a64ed1c0bae2e100/variables" for 127.0.0.1 at 2014-12-04 04:37:06 -0800
+
+
+Started PATCH "/feed?id=9" for 127.0.0.1 at 2014-12-04 04:37:12 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 5], ["updated_at", "2014-12-04 12:37:12.244089"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 60], ["updated_at", "2014-12-04 12:37:12.247379"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 11ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:12 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 206ms (Views: 203.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:14 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 6], ["updated_at", "2014-12-04 12:37:14.129945"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 55], ["loyalty", 60], ["updated_at", "2014-12-04 12:37:14.132145"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:14 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 186.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/new_petpet?pet_id=9" for 127.0.0.1 at 2014-12-04 04:37:22 -0800
+Processing by PetPetsController#new_petpet as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "pet_id"=>"9"}
+  Rendered pet_pets/new_petpet.html.erb within layouts/application (62.4ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 237ms (Views: 235.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/createpetpet?id=9" for 127.0.0.1 at 2014-12-04 04:37:27 -0800
+Processing by PetsController#createpetpet as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "pet_pet"=>{"name"=>"hj", "color"=>"jvj"}, "commit"=>"Create Pet pet", "id"=>"9"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", "9"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 8ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:27 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 4]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 182ms (Views: 178.8ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/feed?id=9" for 127.0.0.1 at 2014-12-04 04:37:46 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 5], ["updated_at", "2014-12-04 12:37:46.384170"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 65], ["updated_at", "2014-12-04 12:37:46.388512"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 12ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:46 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 222ms (Views: 217.8ms | ActiveRecord: 1.0ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:47 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 6], ["updated_at", "2014-12-04 12:37:47.884761"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 60], ["loyalty", 70], ["updated_at", "2014-12-04 12:37:47.887323"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:47 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 195ms (Views: 192.4ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:49 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 7], ["updated_at", "2014-12-04 12:37:49.617299"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 55], ["loyalty", 80], ["updated_at", "2014-12-04 12:37:49.619701"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 9ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 178ms (Views: 175.6ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:50 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 4  [["neocoin", 8], ["updated_at", "2014-12-04 12:37:50.526651"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 9[0m  [["hunger", 50], ["loyalty", 90], ["updated_at", "2014-12-04 12:37:50.530745"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 11ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:37:50 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.2ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 192ms (Views: 188.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/battle?id=9" for 127.0.0.1 at 2014-12-04 04:37:51 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "id"=>"9"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError - undefined method `save' for nil:NilClass:
+  app/controllers/users_controller.rb:27:in `battle'
+  actionpack (4.1.6) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.6) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.6) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.6) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.6) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.6) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.6) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.6) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.6) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.6) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.6) lib/action_controller/metal.rb:232:in `block in action'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:82:in `dispatch'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:50:in `call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:73:in `block in call'
+  actionpack (4.1.6) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.6) lib/action_dispatch/routing/route_set.rb:678:in `call'
+  warden (1.2.3) lib/warden/manager.rb:35:in `block in call'
+  warden (1.2.3) lib/warden/manager.rb:34:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/conditionalget.rb:35:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/flash.rb:254:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.6) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.6) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.6) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.6) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.6) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.0.0) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.6) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.6) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.6) lib/action_dispatch/middleware/static.rb:64:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.6) lib/rails/engine.rb:514:in `call'
+  railties (4.1.6) lib/rails/application.rb:144:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+   () Users/mayaah/.rvm/gems/ruby-2.1.3@global/gems/rack-1.5.2/lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/mayaah/.rvm/rubies/ruby-2.1.3/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/351598a1d66b7674/variables" for 127.0.0.1 at 2014-12-04 04:37:51 -0800
+
+
+Started GET "/new_petpet?pet_id=9" for 127.0.0.1 at 2014-12-04 04:39:29 -0800
+Processing by PetPetsController#new_petpet as HTML
+  Parameters: {"authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "pet_id"=>"9"}
+  Rendered pet_pets/new_petpet.html.erb within layouts/application (8.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 182ms (Views: 180.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/createpetpet?id=9" for 127.0.0.1 at 2014-12-04 04:39:39 -0800
+Processing by PetsController#createpetpet as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0+ScYWsT43Bmk4pvxnHYleWS+wHE+Uy9qFcZGHuly9w=", "pet_pet"=>{"name"=>"Flower", "color"=>"pink"}, "commit"=>"Create Pet pet", "id"=>"9"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pet_pets" ("color", "created_at", "name", "pet_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["color", "pink"], ["created_at", "2014-12-04 12:39:39.219765"], ["name", "Flower"], ["pet_id", 9], ["updated_at", "2014-12-04 12:39:39.219765"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2014-12-04 04:39:39 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 4  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.2ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 9]]
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 202ms (Views: 197.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:53:38 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_navigation_links.html.erb (5.3ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 356ms (Views: 345.5ms | ActiveRecord: 0.6ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "pet_pets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "color" varchar(255), "created_at" datetime, "updated_at" datetime, "pet_id" integer) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "pets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "color" varchar(255), "hunger" integer, "loyalty" integer, "created_at" datetime, "updated_at" datetime, "user_id" integer) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "pet_id" integer, "neocoin" integer) [0m
+  [1m[35m (0.5ms)[0m  select sqlite_version(*)
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204053104')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224203310')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224203311')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141125041742')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141125041754')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141203042240')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141203042303')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141204045730')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Black"], ["created_at", "2014-12-04 12:53:52.161176"], ["hunger", 50], ["loyalty", 50], ["name", "Shoryu"], ["updated_at", "2014-12-04 12:53:52.161176"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Blue"], ["created_at", "2014-12-04 12:53:52.165195"], ["hunger", 50], ["loyalty", 50], ["name", "Poogle"], ["updated_at", "2014-12-04 12:53:52.165195"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Black"], ["created_at", "2014-12-04 12:53:52.167968"], ["hunger", 50], ["loyalty", 50], ["name", "Kiko"], ["updated_at", "2014-12-04 12:53:52.167968"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Red"], ["created_at", "2014-12-04 12:53:52.170721"], ["hunger", 50], ["loyalty", 50], ["name", "Scorchio"], ["updated_at", "2014-12-04 12:53:52.170721"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Yellow"], ["created_at", "2014-12-04 12:53:52.174271"], ["hunger", 50], ["loyalty", 50], ["name", "Draik"], ["updated_at", "2014-12-04 12:53:52.174271"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Blue"], ["created_at", "2014-12-04 12:53:58.202810"], ["hunger", 50], ["loyalty", 50], ["name", "Shoryu"], ["updated_at", "2014-12-04 12:53:58.202810"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Purple"], ["created_at", "2014-12-04 12:53:58.208831"], ["hunger", 50], ["loyalty", 50], ["name", "Poogle"], ["updated_at", "2014-12-04 12:53:58.208831"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Yellow"], ["created_at", "2014-12-04 12:53:58.211207"], ["hunger", 50], ["loyalty", 50], ["name", "Kiko"], ["updated_at", "2014-12-04 12:53:58.211207"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Orange"], ["created_at", "2014-12-04 12:53:58.213559"], ["hunger", 50], ["loyalty", 50], ["name", "Scorchio"], ["updated_at", "2014-12-04 12:53:58.213559"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Yellow"], ["created_at", "2014-12-04 12:53:58.215868"], ["hunger", 50], ["loyalty", 50], ["name", "Draik"], ["updated_at", "2014-12-04 12:53:58.215868"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:54:02 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 157ms (Views: 155.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:54:04 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 212.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:54:14 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_navigation_links.html.erb (4.6ms)
+  Rendered layouts/_navigation.html.erb (6.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 343ms (Views: 331.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:54:18 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (490.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 646ms (Views: 642.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:54:26 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hYhKCtZ4FTe9tXqGiInnPXYhVPgmnuZ4eBqepKXR6Ds=", "user"=>{"name"=>"Oski", "email"=>"oski@oski.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oski@oski.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'oski@oski.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-12-04 12:54:26.436259"], ["email", "oski@oski.com"], ["encrypted_password", "$2a$10$SMuzxKAq/pTJYft2/V8kvemwJl/Apq8Oyhzv/NpTtgOiMqJuvKyfm"], ["name", "Oski"], ["updated_at", "2014-12-04 12:54:26.436259"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-12-04 12:54:26.442332"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:54:26.442332"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:54:26.443908"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:54:26 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (1.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (8.2ms)
+  Rendered layouts/_navigation.html.erb (8.9ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 198ms (Views: 197.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:54:34 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hYhKCtZ4FTe9tXqGiInnPXYhVPgmnuZ4eBqepKXR6Ds="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:54:34 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 175.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:54:37 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 181ms (Views: 179.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:55:04 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 212ms (Views: 211.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:55:13 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 225ms (Views: 222.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:55:26 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "user"=>{"name"=>"Kevin", "email"=>"kevin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin@gmail.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin@gmail.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 12:55:26.765372"], ["email", "kevin@gmail.com"], ["encrypted_password", "$2a$10$ZdM/iB4.H30h5C.IQPpWZO8yz84PgbXzbsVNtBICSBpOtsX1wnAUW"], ["name", "Kevin"], ["updated_at", "2014-12-04 12:55:26.765372"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["current_sign_in_at", "2014-12-04 12:55:26.768466"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:55:26.768466"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:55:26.768944"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 96ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:55:26 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 194ms (Views: 192.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 04:55:29 -0800
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 190.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/adopt?id=1" for 127.0.0.1 at 2014-12-04 04:55:41 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"1"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["neocoin", 3], ["updated_at", "2014-12-04 12:55:41.516644"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 1[0m  [["updated_at", "2014-12-04 12:55:41.519978"], ["user_id", 2]]
+  [1m[35m (1.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:55:41 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPetPet Load (0.6ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  Rendered users/show.html.erb within layouts/application (24.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 209ms (Views: 206.0ms | ActiveRecord: 1.2ms)
+
+
+Started PATCH "/battle?id=1" for 127.0.0.1 at 2014-12-04 04:55:52 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 4], ["updated_at", "2014-12-04 12:55:52.371134"]]
+  [1m[35m (3.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 1  [["hunger", 45], ["loyalty", 60], ["updated_at", "2014-12-04 12:55:52.377352"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 16ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:55:52 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  Rendered users/show.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 182.6ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/feed?id=1" for 127.0.0.1 at 2014-12-04 04:55:58 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"1"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 3], ["updated_at", "2014-12-04 12:55:58.849485"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 1  [["hunger", 55], ["updated_at", "2014-12-04 12:55:58.852762"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:55:58 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 169ms (Views: 166.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 04:56:08 -0800
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 183ms (Views: 181.4ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/adopt?id=5" for 127.0.0.1 at 2014-12-04 04:56:13 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["neocoin", 6], ["updated_at", "2014-12-04 12:56:13.057454"]]
+  [1m[36m (13.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 5[0m  [["updated_at", "2014-12-04 12:56:13.080395"], ["user_id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 32ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:56:13 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 5]]
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 182.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/new_neopet" for 127.0.0.1 at 2014-12-04 04:56:24 -0800
+Processing by PetsController#new_neopet as HTML
+  Rendered pets/new_neopet.html.erb within layouts/application (55.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 223ms (Views: 221.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2014-12-04 04:56:31 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "pet"=>{"name"=>"Cynthia", "color"=>"Pink"}, "commit"=>"Create Pet"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["color", "Pink"], ["created_at", "2014-12-04 12:56:31.420323"], ["hunger", 50], ["loyalty", 50], ["name", "Cynthia"], ["updated_at", "2014-12-04 12:56:31.420323"], ["user_id", 2]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 8ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:56:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 181ms (Views: 176.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/new_petpet?pet_id=1" for 127.0.0.1 at 2014-12-04 04:56:36 -0800
+Processing by PetPetsController#new_petpet as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "pet_id"=>"1"}
+  Rendered pet_pets/new_petpet.html.erb within layouts/application (12.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 191.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/createpetpet?id=1" for 127.0.0.1 at 2014-12-04 04:56:49 -0800
+Processing by PetsController#createpetpet as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "pet_pet"=>{"name"=>"Sammy", "color"=>"Orange"}, "commit"=>"Create Pet pet", "id"=>"1"}
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pet_pets" ("color", "created_at", "name", "pet_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["color", "Orange"], ["created_at", "2014-12-04 12:56:49.077017"], ["name", "Sammy"], ["pet_id", 1], ["updated_at", "2014-12-04 12:56:49.077017"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:56:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 1]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 5]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 187ms (Views: 184.6ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/battle?id=5" for 127.0.0.1 at 2014-12-04 04:57:06 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 7], ["updated_at", "2014-12-04 12:57:06.152441"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 45], ["loyalty", 60], ["updated_at", "2014-12-04 12:57:06.154943"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:06 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 187ms (Views: 183.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:07 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 6], ["updated_at", "2014-12-04 12:57:07.820767"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 55], ["updated_at", "2014-12-04 12:57:07.823612"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 11ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:07 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 178ms (Views: 175.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:08 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 5], ["updated_at", "2014-12-04 12:57:08.955088"]]
+  [1m[35m (1.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 65], ["updated_at", "2014-12-04 12:57:08.958468"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:08 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 206ms (Views: 202.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:09 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 4], ["updated_at", "2014-12-04 12:57:09.185297"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 75], ["updated_at", "2014-12-04 12:57:09.188417"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 8ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:09 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation_links.html.erb (5.6ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 196.6ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:10 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 3], ["updated_at", "2014-12-04 12:57:10.242580"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 85], ["updated_at", "2014-12-04 12:57:10.245325"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:10 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 181ms (Views: 178.0ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:11 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 2], ["updated_at", "2014-12-04 12:57:11.406242"]]
+  [1m[35m (2.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 95], ["updated_at", "2014-12-04 12:57:11.410549"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:11 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.0ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 181.7ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/feed?id=5" for 127.0.0.1 at 2014-12-04 04:57:13 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "id"=>"5"}
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 2[0m  [["neocoin", 1], ["updated_at", "2014-12-04 12:57:13.095938"]]
+  [1m[35m (2.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 5  [["hunger", 105], ["updated_at", "2014-12-04 12:57:13.100644"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 10ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-12-04 04:57:13 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPet Load (0.1ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 2]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 1]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 5]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 189ms (Views: 186.0ms | ActiveRecord: 0.6ms)
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "pet_pets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "color" varchar(255), "created_at" datetime, "updated_at" datetime, "pet_id" integer) [0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "pets" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "color" varchar(255), "hunger" integer, "loyalty" integer, "created_at" datetime, "updated_at" datetime, "user_id" integer) 
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime, "name" varchar(255), "pet_id" integer, "neocoin" integer) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (1.0ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141204053104')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140224203310')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20140224203311')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141125041742')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141125041754')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141203042240')
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20141203042303')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20141204045730')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "Yellow"], ["created_at", "2014-12-04 12:57:41.727756"], ["hunger", 50], ["loyalty", 50], ["name", "Shoryu"], ["updated_at", "2014-12-04 12:57:41.727756"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "White"], ["created_at", "2014-12-04 12:57:41.730988"], ["hunger", 50], ["loyalty", 50], ["name", "Poogle"], ["updated_at", "2014-12-04 12:57:41.730988"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "White"], ["created_at", "2014-12-04 12:57:41.733387"], ["hunger", 50], ["loyalty", 50], ["name", "Kiko"], ["updated_at", "2014-12-04 12:57:41.733387"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Blue"], ["created_at", "2014-12-04 12:57:41.735868"], ["hunger", 50], ["loyalty", 50], ["name", "Scorchio"], ["updated_at", "2014-12-04 12:57:41.735868"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "White"], ["created_at", "2014-12-04 12:57:41.738088"], ["hunger", 50], ["loyalty", 50], ["name", "Draik"], ["updated_at", "2014-12-04 12:57:41.738088"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "White"], ["created_at", "2014-12-04 12:57:46.720769"], ["hunger", 50], ["loyalty", 50], ["name", "Shoryu"], ["updated_at", "2014-12-04 12:57:46.720769"]]
+  [1m[35m (2.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Purple"], ["created_at", "2014-12-04 12:57:46.728131"], ["hunger", 50], ["loyalty", 50], ["name", "Poogle"], ["updated_at", "2014-12-04 12:57:46.728131"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "White"], ["created_at", "2014-12-04 12:57:46.730509"], ["hunger", 50], ["loyalty", 50], ["name", "Kiko"], ["updated_at", "2014-12-04 12:57:46.730509"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["color", "Orange"], ["created_at", "2014-12-04 12:57:46.732715"], ["hunger", 50], ["loyalty", 50], ["name", "Scorchio"], ["updated_at", "2014-12-04 12:57:46.732715"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["color", "White"], ["created_at", "2014-12-04 12:57:46.735010"], ["hunger", 50], ["loyalty", 50], ["name", "Draik"], ["updated_at", "2014-12-04 12:57:46.735010"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:57:48 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 185ms (Views: 183.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:58:05 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (13.0ms)
+  Rendered layouts/_navigation.html.erb (14.7ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 397ms (Views: 383.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:58:55 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (483.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 646ms (Views: 643.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:59:16 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA=", "user"=>{"name"=>"Howard", "email"=>"howard@howardswag.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'howard@howardswag.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'howard@howardswag.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 12:59:16.623318"], ["email", "howard@howardswag.com"], ["encrypted_password", "$2a$10$Q4ffDRT0PLx01jArn5XEZeMxgzRTA6kFLVh55CWpGEm93Kq.65RTq"], ["name", "Howard"], ["updated_at", "2014-12-04 12:59:16.623318"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 1  [["current_sign_in_at", "2014-12-04 12:59:16.630195"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:59:16.630195"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:59:16.631293"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:16 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 193ms (Views: 192.2ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:59:19 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"alzn+K5Iz82yczRGr68sg4vKpwYzR1mkwzoUiI1IXRA="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:19 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 178ms (Views: 177.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 04:59:21 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 178ms (Views: 176.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 04:59:32 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bvfhlipZ8XcI9WY//9GAkX9xPfu7ofFE/RuGsVt6+rU=", "user"=>{"name"=>"Jessica", "email"=>"jessica@jessica.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jessica@jessica.com' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'jessica@jessica.com' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", "2014-12-04 12:59:32.876771"], ["email", "jessica@jessica.com"], ["encrypted_password", "$2a$10$EhxBJdE4lYUdnW7U/6XyFe5K2pGf2Y6McC9cYghqkfbPHpHjXGwAi"], ["name", "Jessica"], ["updated_at", "2014-12-04 12:59:32.876771"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 2  [["current_sign_in_at", "2014-12-04 12:59:32.879618"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 12:59:32.879618"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 12:59:32.880129"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:32 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 197.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:34 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.9ms)
+  Rendered layouts/_navigation.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 181ms (Views: 180.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-12-04 04:59:37 -0800
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"bvfhlipZ8XcI9WY//9GAkX9xPfu7ofFE/RuGsVt6+rU="}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 2  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:37 -0800
+Processing by VisitorsController#index as HTML
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "users"[0m
+  Rendered visitors/index.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 175.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-04 04:59:40 -0800
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-12-04 04:59:40 -0800
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/sessions/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 192ms (Views: 190.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-12-04 04:59:42 -0800
+Processing by VisitorsController#index as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "users"
+  Rendered visitors/index.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 193ms (Views: 191.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-12-04 05:00:32 -0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/registrations/new.html.erb within layouts/application (2.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 200ms (Views: 198.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-12-04 05:00:44 -0800
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "user"=>{"name"=>"Kevin", "email"=>"kevin@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin@gmail.com' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'kevin@gmail.com' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", "2014-12-04 13:00:44.681558"], ["email", "kevin@gmail.com"], ["encrypted_password", "$2a$10$ZcikR9XRFkJOYiOaTC21Se/7tuyZCftR8Z96lsNgpVX0SIzPq.yKa"], ["name", "Kevin"], ["updated_at", "2014-12-04 13:00:44.681558"]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Binary data inserted for `string` type on column `current_sign_in_ip`
+Binary data inserted for `string` type on column `last_sign_in_ip`
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = ?, "current_sign_in_ip" = ?, "last_sign_in_at" = ?, "last_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["current_sign_in_at", "2014-12-04 13:00:44.686436"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-12-04 13:00:44.686436"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-12-04 13:00:44.687188"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/users
+Completed 302 Found in 98ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-12-04 05:00:44 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/_user.html.erb (1.8ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/_user.html.erb (0.6ms)
+  Rendered users/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 236ms (Views: 234.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:00:48 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPet Load (0.2ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered users/show.html.erb within layouts/application (26.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.5ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 215ms (Views: 209.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/adoption_agency" for 127.0.0.1 at 2014-12-04 05:00:52 -0800
+Processing by PetsController#index as HTML
+  [1m[35mPet Load (0.3ms)[0m  SELECT "pets".* FROM "pets"
+  Rendered pets/index.html.erb within layouts/application (13.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 213ms (Views: 211.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/adopt?id=6" for 127.0.0.1 at 2014-12-04 05:00:59 -0800
+Processing by PetsController#adopt as HTML
+  Parameters: {"authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "id"=>"6"}
+  [1m[35mPet Load (0.3ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3  [["neocoin", 3], ["updated_at", "2014-12-04 13:00:59.228618"]]
+  [1m[36m (2.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "pets" SET "updated_at" = ?, "user_id" = ? WHERE "pets"."id" = 6[0m  [["updated_at", "2014-12-04 13:00:59.235262"], ["user_id", 3]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 16ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:00:59 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mPet Load (0.1ms)[0m  [1mSELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[35mPetPet Load (0.8ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (15.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 215ms (Views: 211.9ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/battle?id=6" for 127.0.0.1 at 2014-12-04 05:01:14 -0800
+Processing by UsersController#battle as HTML
+  Parameters: {"authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "id"=>"6"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["neocoin", 4], ["updated_at", "2014-12-04 13:01:14.537685"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "pets" SET "hunger" = ?, "loyalty" = ?, "updated_at" = ? WHERE "pets"."id" = 6  [["hunger", 45], ["loyalty", 60], ["updated_at", "2014-12-04 13:01:14.540905"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 14ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:01:14 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.1ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 201ms (Views: 197.9ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/feed?id=6" for 127.0.0.1 at 2014-12-04 05:01:24 -0800
+Processing by PetsController#feed as HTML
+  Parameters: {"authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "id"=>"6"}
+  [1m[35mPet Load (0.2ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "neocoin" = ?, "updated_at" = ? WHERE "users"."id" = 3[0m  [["neocoin", 3], ["updated_at", "2014-12-04 13:01:24.197261"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "pets" SET "hunger" = ?, "updated_at" = ? WHERE "pets"."id" = 6  [["hunger", 55], ["updated_at", "2014-12-04 13:01:24.200585"]]
+  [1m[36m (1.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:01:24 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 6]]
+  Rendered users/show.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 199ms (Views: 196.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/new_neopet" for 127.0.0.1 at 2014-12-04 05:01:34 -0800
+Processing by PetsController#new_neopet as HTML
+  Rendered pets/new_neopet.html.erb within layouts/application (57.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered layouts/_navigation_links.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 245ms (Views: 243.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/create" for 127.0.0.1 at 2014-12-04 05:01:44 -0800
+Processing by PetsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "pet"=>{"name"=>"Cynthia", "color"=>"pink"}, "commit"=>"Create Pet"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "pets" ("color", "created_at", "hunger", "loyalty", "name", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["color", "pink"], ["created_at", "2014-12-04 13:01:44.837800"], ["hunger", 50], ["loyalty", 50], ["name", "Cynthia"], ["updated_at", "2014-12-04 13:01:44.837800"], ["user_id", 3]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:01:44 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 6]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (1.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 207ms (Views: 202.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/new_petpet?pet_id=6" for 127.0.0.1 at 2014-12-04 05:01:52 -0800
+Processing by PetPetsController#new_petpet as HTML
+  Parameters: {"authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "pet_id"=>"6"}
+  Rendered pet_pets/new_petpet.html.erb within layouts/application (13.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 211ms (Views: 209.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/createpetpet?id=6" for 127.0.0.1 at 2014-12-04 05:02:01 -0800
+Processing by PetsController#createpetpet as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PHmEDKQJh/KDb1jGp04qADyYcxAWfJ3kyMwTDY3Hju8=", "pet_pet"=>{"name"=>"Sammy'", "color"=>"Orange"}, "commit"=>"Create Pet pet", "id"=>"6"}
+  [1m[35mPet Load (0.3ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "pet_pets" ("color", "created_at", "name", "pet_id", "updated_at") VALUES (?, ?, ?, ?, ?)  [["color", "Orange"], ["created_at", "2014-12-04 13:02:01.973613"], ["name", "Sammy'"], ["pet_id", 6], ["updated_at", "2014-12-04 13:02:01.973613"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mPet Load (0.1ms)[0m  SELECT  "pets".* FROM "pets"  WHERE "pets"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 12ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-12-04 05:02:01 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 3  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mPet Load (0.2ms)[0m  SELECT "pets".* FROM "pets"  WHERE "pets"."user_id" = ?  [["user_id", 3]]
+  [1m[36mPetPet Load (0.1ms)[0m  [1mSELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?[0m  [["pet_id", 6]]
+  [1m[35mPetPet Load (0.1ms)[0m  SELECT "pet_pets".* FROM "pet_pets"  WHERE "pet_pets"."pet_id" = ?  [["pet_id", 11]]
+  Rendered users/show.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 207ms (Views: 202.7ms | ActiveRecord: 0.9ms)

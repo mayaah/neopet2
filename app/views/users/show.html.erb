@@ -36,8 +36,9 @@
       	<ul><%= button_to "Battle!", battle_path(id: pet), :class => "button medium", :method => :patch %>,</ul> 
       	<ul><%= button_to "Feed Neopet", feed_path(id: pet), :class => "button medium", :method => :patch %>,</ul> 
       	<ul><span class="createpetpet"><%= link_to "Create a Petpet!", new_petpet_path(:pet_id => pet.id), :class => "button medium", :method => :get %></span></ul>
+      	<b>My PetPets:</b>
       <% pet.pet_pets.each do |pet_pet| %>
-      	<b>My PetPets:</b> Name: <%= pet_pet.name %>,  Color <%= pet_pet.color %>
+      	Name: <%= pet_pet.name %>,  Color <%= pet_pet.color %>
       	<% end %>
       </div>
  <% end %>

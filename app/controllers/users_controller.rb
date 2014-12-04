@@ -15,15 +15,15 @@ class UsersController < ApplicationController
   def battle
     @pet = Pet.find(params[:id])
     success_rate = Random.new.rand(1..100)
-    if (success_rate <= 75) && (@pet.hunger > 0)
+    # if (success_rate <= 75)
       @pet.hunger -= 5
       @pet.loyalty += 10
       @user = User.find(@pet.user_id)
       @user.neocoin += 1
-    else
-      @pet.hunger -= 5
-      @pet.loyalty -= 15   
-    end
+    # else
+    #   @pet.hunger -= 5
+    #   @pet.loyalty -= 15   
+    # end
     @user.save
     @pet.save
     redirect_to user_path(@pet.user_id)
